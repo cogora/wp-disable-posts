@@ -116,22 +116,15 @@ class WP_Disable_Posts
 	public static function check_post_type( $posts = array() )
 	{
 		global $wp_query;
-
-		$look_for = "wp_posts.post_type = 'post'";
-		$instance = strpos( $wp_query->request, $look_for );
-		/*
-			http://localhost/?m=2013		- yearly archives
-			http://localhost/?m=201303		- monthly archives
-			http://localhost/?m=20130327	- daily archives
-			http://localhost/?cat=1			- category archives
-			http://localhost/?tag=foobar	- tag archives
-			http://localhost/?p=1			- single post
-		*/
-		if ( $instance !== false ) {
-			$posts = array(); // we are querying for post type `post`
+    		$look_for = "wp_posts.post_type = 'post'";
+		if ( $wp_query->request !== null && $look_for !== null ) {
+			$instance = strpos( $wp_query->request, $look_for );
+			if ( $instance !== false ) {
+		  		$posts = array(); // we are querying for post type `post`
+			}
+			return $posts;
 		}
 
-		return $posts;
 	}
 
 	/**
