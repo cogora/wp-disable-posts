@@ -1,11 +1,10 @@
 <?php
 /*
-Plugin Name: WP Disable Posts
-Plugin URI: http://tonykwon.com/wordpress-plugins/wp-disable-posts/
+Name: WP Disable Posts
 Description: This plugin disables the built-in WordPress Post Type `post`
-Version: 0.1
+Version: 0.1.1
 Author: Tony Kwon
-Author URI: http://tonykwon.com/wordpress-plugins/wp-disable-posts/
+Author URI: https://github.com/tonykwon/wp-disable-posts/blob/master/wp-disable-posts.php
 License: GPLv3
 */
 
